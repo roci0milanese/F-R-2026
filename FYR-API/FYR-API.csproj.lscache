@@ -56,6 +56,11 @@ TemporaryDependencyNodeTargetIdentifier=net10.0
 
 [sourceFiles]
 Datos/AppDbContext.cs
+Endpoints/AuthController.cs/
+ AuthController.cs
+ PedidoController.cs
+ ProductoController.cs
+ UsuarioController.cs
 Entidades/Enums/
  EstadoPago.cs
  EstadoPedido.cs
@@ -80,6 +85,18 @@ Entidades/Models/
  Subcategoria.cs
  Sucursal.cs
  Usuario.cs
+Logica/DTOs/
+ CreateProductoDTO.cs
+ ProductoDTO.cs
+ Services/
+  AuthService.cs
+  Interfaces/
+   IAuthService.cs
+   IPedidoService.cs
+   IProductoService.cs
+  PedidoService.cs
+  ProductoService.cs
+ UpdateProductoDTO.cs
 Migrations/
  20260515205411_Inicial.cs
  20260515205411_Inicial.Designer.cs
@@ -89,6 +106,10 @@ obj/Debug/net10.0/
  FYR-API.AssemblyInfo.cs
  FYR-API.GlobalUsings.g.cs
 Program.cs
+Repositorios/
+ PedidoRepository.cs
+ ProductoRepository.cs
+ UsuarioRepository.cs
 
 [metadataReferences]
 <DOTNET>/packs/Microsoft.AspNetCore.App.Ref/10.0.6/ref/net10.0/
