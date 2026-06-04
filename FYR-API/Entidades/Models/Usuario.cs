@@ -40,4 +40,5 @@ public class Usuario
     public ICollection<Pedido> Pedidos { get; set; } = new List<Pedido>();
 
     public ICollection<Reporte> Reportes { get; set; } = new List<Reporte>();
+    public ICollection<Notificacion> Notificaciones { get; set; } = new List<Notificacion>();
 }

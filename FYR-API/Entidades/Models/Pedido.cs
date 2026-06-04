@@ -27,4 +27,6 @@ public class Pedido
     public ICollection<DetallePedido> DetallesPedido { get; set; } = new List<DetallePedido>();
 
     public ICollection<Pago> Pagos { get; set; } = new List<Pago>();
+    public Factura? Factura { get; set; }
+    public Envio? Envio { get; set; }
 }
