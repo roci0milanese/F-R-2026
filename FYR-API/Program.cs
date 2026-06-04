@@ -1,6 +1,8 @@
 using Scalar.AspNetCore;
 using Datos;
 using Microsoft.EntityFrameworkCore;
+using Datos.Interfaces;
+using Datos.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,7 +12,14 @@ builder.Services.AddDbContext<AppDbContext>(options =>
         builder.Configuration.GetConnectionString("DefaultConnection")
     )
 );
- 
+
+builder.Services.AddScoped<ICategoriaRepository, CategoriaRepository>();
+builder.Services.AddControllers()
+.AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.ReferenceHandler =
+        System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+});
 
 // Swagger
 builder.Services.AddOpenApi();
